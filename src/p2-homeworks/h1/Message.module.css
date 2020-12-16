@@ -1,0 +1,83 @@
+.wrapperMessageContent{
+    display: flex;
+    margin: 20px;
+    background-color:#b4e520;
+    padding: 40px;
+}
+.container {
+    clear: both;
+    position: relative;
+  }
+  
+  .container .arrow {
+    width: 12px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    top:56px;
+    right: -2px;
+  }
+  
+  .container .arrow .outer {
+    width: 0;
+    height: 0;
+    border-right: 20px solid #000000;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .container .arrow .inner {
+    width: 0;
+    height: 0;
+    border-right: 20px solid #092103;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 2px;
+  }
+  
+  .container .messageBody {
+    float: left;
+    width: 210px;
+    height: auto;
+    border: 1px solid #CCC;
+    background-color: #092103;
+    border: 1px solid #092103;
+    padding: 6px 8px;
+    clip-path: polygon(2% 0%, 98% 0%, 100% 10%, 100% 94%, 98% 100%, 0% 100%, 0% 95%, 0% 6%);
+    border-radius: 0px 0px 0px 5px;
+  }
+  .messageName{
+      color:#9c9ac5;
+      font-weight: bolder;
+      font-weight: bold;
+  }
+  .messageTime{
+text-align: right;
+color:rgba(194, 211, 192, 0.2);
+font-weight: 600;
+  }
+  .messageContent{
+    margin-top: 5px;
+    font-weight:600;
+    color: rgba(194, 211, 192, 0.8);
+  }
+  .avatarImg img{
+    display: inline;
+    border-radius: 50px;
+    height: 50px;
+    margin-top: 22px;
+    margin-left: 40px;
+    border: 1px solid rgba(56, 73, 2, 0.8);
+    }
+    @media only screen and (max-width: 600px) {
+      body {
+        background-color: lightblue;
+      }
+    }
+      
