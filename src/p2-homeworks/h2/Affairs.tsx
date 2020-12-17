@@ -6,14 +6,15 @@ type AffairsPropsType = { // need to fix any
     data:Array<AffairType>
     setFilter: any
     deleteAffairCallback:(_id: number)=>void
+    filteredAffairs:(FilterType:Array<AffairType>)=>void
 }
 
 function Affairs(props: AffairsPropsType) {
     const mappedAffairs = props.data.map((a: AffairType) => (
-        <Affair // should work
-            key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
+        <Affair 
+            key={a._id} 
             affair={a}
-            deleteAffairCallback={props.deleteAffairCallback}
+            deleteAffairCallback={()=>{ props.deleteAffairCallback(a._id)}}
         />
     ))
 
