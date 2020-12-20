@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, {PropsWithRef, useState} from "react";
 import { Key } from "readline";
 import Affairs from "./Affairs";
 
 // types
 export type AffairPriorityType = "high" |"low"|"middle"; // need to fix any
-export type AffairType =any// need to fix any
+export type AffairType = typeof defaultAffairs //need to fix any
 export type FilterType = "all" | AffairPriorityType;
 
 // constants
@@ -17,11 +17,11 @@ const defaultAffairs:any = [ // need to fix any
 ];
 
 // pure helper functions
-export const filterAffairs = (affairs: any, filter:string):any => { // need to fix any
+export const filterAffairs = (affairs: string, filter:string):any => { // need to fix any
     if (filter === "all") return affairs;
     else return; // need to fix
 }
-export const deleteAffair = (affairs: any, _id:number): any => { // need to fix any
+export const deleteAffair = (affairs: string, _id:number): any => { // need to fix any
     return; // need to fix
 }
 
