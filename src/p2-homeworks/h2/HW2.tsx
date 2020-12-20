@@ -3,12 +3,17 @@ import { Key } from "readline";
 import Affairs from "./Affairs";
 
 // types
-export type AffairPriorityType = "high" |"low"|"middle"; // need to fix any
-export type AffairType = typeof defaultAffairs //need to fix any
+export type AffairPriorityType = "high" |"low"|"middle";
+export type AffairType = {
+    _id:number
+    name:string
+    priority:FilterType
+}
 export type FilterType = "all" | AffairPriorityType;
 
+
 // constants
-const defaultAffairs:any = [ // need to fix any
+const defaultAffairs:Array<AffairType>= [
     {_id: 1, name: "React", priority: "high"},
     {_id: 2, name: "anime", priority: "low"},
     {_id: 3, name: "games", priority: "low"},
@@ -17,16 +22,17 @@ const defaultAffairs:any = [ // need to fix any
 ];
 
 // pure helper functions
-export const filterAffairs = (affairs: string, filter:string):any => { // need to fix any
+export const filterAffairs = (affairs: Array<AffairType>, filter:FilterType):Array<AffairType> => { // need to fix any
     if (filter === "all") return affairs;
-    else return; // need to fix
-}
-export const deleteAffair = (affairs: string, _id:number): any => { // need to fix any
-    return; // need to fix
+    else if(filter==="high")return affairs;
+    else if(filter==="low")return affairs;
+    else if(filter==="middle")return affairs;}
+export const deleteAffair = (affairs:Array<AffairType>, _id:number):Array<AffairType>=> {
+    return affairs;
 }
 
 function HW2() {
-    const [affairs, setAffairs] = useState<FilterType>(defaultAffairs); 
+    const [affairs, setAffairs] = useState<Array<AffairType>>(defaultAffairs); 
     const [filter, setFilter] = useState<FilterType>("all");
 
     const filteredAffairs = filterAffairs(affairs, filter);

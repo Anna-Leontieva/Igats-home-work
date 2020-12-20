@@ -1,15 +1,16 @@
 import React from "react";
 import Affair from "./Affair";
 import {AffairType} from "./HW2";
+import {FilterType} from "./HW2"
 
 type AffairsPropsType = { // need to fix any
-    data:Array<string>
-    setFilter:any
+    data:Array<AffairType>
+    setFilter:(value:FilterType)=>void
     deleteAffairCallback: (_id:number)=>void
 }
 
 function Affairs(props: AffairsPropsType) {
-    const mappedAffairs = props.data.map((a: AffairType) => (
+    const mappedAffairs = props.data.map((a:any) => (
         <Affair // should work
             key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
             affair={a}
