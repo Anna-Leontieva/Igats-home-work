@@ -22,7 +22,7 @@ const defaultAffairs:Array<AffairType>= [
 ];
 
 // pure helper functions
-export const filterAffairs = (affairs: Array<AffairType>, filter:FilterType):Array<AffairType> => { // need to fix any
+export const filterAffairs = (affairs: Array<AffairType>, filter:FilterType): Array<AffairType> => { // need to fix any
     if (filter === "all") return affairs;
     else if(filter==="high")return affairs;
     else if(filter==="low")return affairs;
