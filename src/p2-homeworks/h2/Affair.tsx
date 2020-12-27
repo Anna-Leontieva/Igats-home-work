@@ -1,16 +1,17 @@
 import React from "react";
+import { AffairType, filterAffairs } from "./HW2";
 
-type AffairPropsType = {
-    affair: string 
-    deleteAffairCallback:(_id:number)=>void // need to fix any
+ type AffairPropsType = {
+    affair: AffairType
+    deleteAffairCallback?:(_id:number)=>void // need to fix any
 }
 
 function Affair(props: AffairPropsType) {
-  const deleteCallback = () => {props.deleteAffairCallback(Affair.length)};// need to fix
+  const deleteCallback = () => {props.affair._id};// need to fix
 
     return (
         <div>
-            // show some text
+            {props.affair.name}
             <button onClick={deleteCallback}>X</button>
         </div>
     );

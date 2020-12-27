@@ -24,11 +24,13 @@ const defaultAffairs:Array<AffairType>= [
 // pure helper functions
 export const filterAffairs = (affairs: Array<AffairType>, filter:FilterType): Array<AffairType> => { // need to fix any
     if (filter === "all") return affairs;
-    else if(filter==="high")return affairs;
-    else if(filter==="low")return affairs;
-    else if(filter==="middle")return affairs;}
-export const deleteAffair = (affairs:Array<AffairType>, _id:number):Array<AffairType>=> {
+    if(filter === "high") return affairs.filter(p=>p.priority ==="high");
+    if(filter === "middle") return affairs.filter(p=>p.priority ==="middle");
+    if(filter === "low") return affairs.filter(p=>p.priority ==="low");
     return affairs;
+}
+export const deleteAffair = (affairs:Array<AffairType>, _id:number):Array<AffairType>=> {
+    return affairs.filter(t=>t._id !==_id)
 }
 
 function HW2() {
