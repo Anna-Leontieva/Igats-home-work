@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {ChangeEvent, useState} from "react";
 import Greeting from "./Greeting";
 
 type GreetingContainerPropsType = {
@@ -15,10 +15,11 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const [name, setName] = useState<string>(""); // need to fix any
     const [error, setError] = useState<string>(""); // need to fix any
 
-    const setNameCallback = (e: any) => { // need to fix any
-        setName(""); // need to fix
+    const setNameCallback = (e:ChangeEvent<HTMLInputElement>) => { // need to fix any
+        setName(e.currentTarget.value); // need to fix
     };
     const addUser = () => {
+        setName(name);
         alert(`Hello  world!`); // need to fix
     };
 
