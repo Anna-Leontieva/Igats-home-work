@@ -9,7 +9,7 @@ function HW4() {
     const error = text ? "" : "error";
     const showAlert = () => {
         if (error) {
-            alert("введите текст...");
+            alert("Ошибка");
         } else {
             alert(text); // если нет ошибки показать текст
         }
