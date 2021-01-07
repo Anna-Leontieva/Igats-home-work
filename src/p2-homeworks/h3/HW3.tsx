@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { isPropertySignature } from "typescript";
 import { v1 } from "uuid";
 import GreetingContainer from "./GreetingContainer";
 
@@ -12,8 +13,10 @@ export type UserType = {
 function HW3() {
     const [users, setUsers] = useState<Array<string>>([]); // need to fix any
 
-    const addUserCallback = (name: string) => { 
-        setUsers([...users,name]); // need to fix
+    const addUserCallback = (name: string,_id:number) => { 
+        setUsers([name,...users]);
+
+       // need to fix
     }
 
     return (
@@ -23,7 +26,6 @@ function HW3() {
 
             {/*should work (должно работать)*/}
             <GreetingContainer users={users} addUserCallback={addUserCallback}/>
-
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeGreeting/>*/}

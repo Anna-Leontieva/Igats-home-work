@@ -1,9 +1,10 @@
 import React, {ChangeEvent, useState} from "react";
+import { isPropertySignature } from "typescript";
 import Greeting from "./Greeting";
 
 type GreetingContainerPropsType = {
     users: Array<string> // need to fix any
-    addUserCallback: (name:string)=>void // need to fix any
+    addUserCallback: (name:string,_id:number)=>void // need to fix any
 }
 
 // более простой и понятный для новичков
@@ -18,12 +19,15 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const setNameCallback = (e:ChangeEvent<HTMLInputElement>) => { // need to fix any
         setName(e.currentTarget.value); // need to fix
     };
-    const addUser = () => {
+  const addUser = () => {
         setName(name);
-        alert(`Hello  world!`); // need to fix
+        alert((`Hello,`)+name);
+         // need to fix
     };
+    
+    const totalUsers = users.length;
 
-    const totalUsers = 0; // need to fix
+     // need to fix
 
     return (
         <Greeting
