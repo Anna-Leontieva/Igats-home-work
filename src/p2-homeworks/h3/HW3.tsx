@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { isPropertySignature } from "typescript";
 import { v1 } from "uuid";
 import GreetingContainer from "./GreetingContainer";
+import s from './HW3.module.css';
 
 // types
 export type UserType = {
@@ -19,9 +20,11 @@ function HW3() {
     }
 
     return (
-        <div>
+        <div className={s.WrapperHW3}>
             <hr/>
+            <div className={s.title}>
             homeworks 3
+            </div>
 
             {/*should work (должно работать)*/}
             <GreetingContainer users={users} addUserCallback={addUserCallback}/>

@@ -1,9 +1,40 @@
 .someClass {
-    border: 1px solid rgb(75, 62, 119);
+    border: 2px solid rgb(75, 62, 119);
+    width: 200px;
+    margin-left: 10px;
+    border-radius: 20px;
+    padding: 3px;
 }
 .errorMessage{
+    margin-left: 15px;
     color:red;
+    font-size: 15px;
+    font-weight: 800;
 }
 .error {
  border:1px solid red; 
+ width: 200px;
+ margin-left: 10px;
+border-radius: 20px;
+}
+.buttonHW3{
+    border-radius: 15px;
+    margin-left: 4px;
+    color: cornsilk;
+    background-color: rgb(75, 62, 119);
+    height: 23px;
+ 
+}
+.buttonHW3:hover{
+    border-radius: 15px;
+    margin-left: 4px;
+    color: cornsilk;
+    background-color: rgb(50, 29, 121);
+}
+.totalUsers{
+    margin-left: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    color:rgb(52, 107, 211);
+    text-shadow: 1px 1px 2px black, 0 0 1em red;
 }
