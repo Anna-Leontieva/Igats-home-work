@@ -1,3 +1,30 @@
-.someClass {
-
+.priorityButtons{
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: rgb(34, 128, 34);
+    color: rgb(221, 202, 202);
+    font-size: 20px;
+}
+.button{
+    width: 20px;
+    border-radius: 5px;
+    background-color: rgb(63, 63, 134);
+    color: rgb(219, 231, 164);
+}
+.priorityButtons:hover{
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: rgb(22, 92, 22);
+    color: rgb(226, 218, 145);
+    font-size: 20px;
+}
+.wrappersHW3{
+  text-align: center;
+  font-size: 25px;
+  background-color: rgb(247, 244, 210);
+}
+.titleHW3{
+    font-weight: 700;
+    text-shadow: darkkhaki 4px 3px;
+    color:rgb(14, 73, 14);
 }
