@@ -4,7 +4,7 @@ import Greeting from "./Greeting";
 
 type GreetingContainerPropsType = {
     users: Array<string> // need to fix any
-    addUserCallback: (name:string,_id:number)=>void // need to fix any
+    addUserCallback: (name:string)=>void // need to fix any
 }
 
 // более простой и понятный для новичков
@@ -14,19 +14,23 @@ type GreetingContainerPropsType = {
 // уровень локальной логики
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => { // деструктуризация пропсов
     const [name, setName] = useState<string>(""); // need to fix any
-    const [error, setError] = useState<string>(""); // need to fix any
-
+    const [error, setError] = useState<string |null>(null); // need to fix any
     const setNameCallback = (e:ChangeEvent<HTMLInputElement>) => { // need to fix any
-        setName(e.currentTarget.value); // need to fix
+        setError(null);
+        setName(e.currentTarget.value);
     };
+
   const addUser = () => {
-        setName(name);
+      if(name !==""){
         alert((`Hello,`)+name);
-         // need to fix
+        addUserCallback(name)}
+        else{
+         setError("You didn't enter a name");
+        }
     };
     
-    const totalUsers = users.length;
 
+    const totalUsers = users.length;
      // need to fix
 
     return (
