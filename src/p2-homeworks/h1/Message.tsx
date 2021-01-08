@@ -5,7 +5,7 @@ type MessageDataProps = {
     avatar: string
     name: string
     message: string
-    time: number
+    time: number | string
 }
 
 function Message(props: MessageDataProps) {
